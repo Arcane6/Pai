@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Investigação - Dengue e Chikungunya (SINAN)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container my-4" id="conteudo-ficha">
+        
+        <header class="text-center mb-4 border-bottom pb-3">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <small>SINAN</small>
+                </div>
+                <div class="col-md-8">
+                    <h4>SISTEMA DE INFORMAÇÃO DE AGRAVOS DE NOTIFICAÇÃO</h4>
+                    <h5>FICHA DE INVESTIGAÇÃO DENGUE E FEBRE DE CHIKUNGUNYA</h5>
+                </div>
+                <div class="col-md-2">
+                    <small>Ministério da Saúde</small>
+                </div>
+            </div>
+        </header>
+
+        <form id="form-sinan">
+            
+            <fieldset class="mb-4">
+                <legend class="bg-light p-2 border">DADOS GERAIS</legend>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">1. Tipo de Notificação</label>
+                        <select class="form-select">
+                            <option value="2">2 - Individual</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">2. Agravo/Doença</label>
+                        <select class="form-select">
+                            <option value="1">1 - Dengue</option>
+                            <option value="2">2 - Chikungunya</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Código (CID10)</label>
+                        <input type="text" class="form-control" placeholder="A90 / A92">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">3. Data Notificação</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">4. UF</label>
+                        <input type="text" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">5. Município de Notificação</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Código (IBGE)</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">6. Unidade de Saúde</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Código</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">7. Data 1ºs Sintomas</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+                <legend class="bg-light p-2 border">NOTIFICAÇÃO INDIVIDUAL</legend>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">8. Nome do Paciente</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">9. Data Nascimento</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">10. Idade</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control">
+                            <select class="form-select" style="max-width: 80px;">
+                                <option value="ano">Ano</option>
+                                <option value="mes">Mês</option>
+                                <option value="dia">Dia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">11. Sexo</label>
+                        <select class="form-select">
+                            <option value="M">M - Masculino</option>
+                            <option value="F">F - Feminino</option>
+                            <option value="I">I - Ignorado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">12. Gestante</label>
+                        <select class="form-select">
+                            <option value="1">1 - 1º Trimestre</option>
+                            <option value="2">2 - 2º Trimestre</option>
+                            <option value="3">3 - 3º Trimestre</option>
+                            <option value="4">4 - Idade gest. ignorada</option>
+                            <option value="5">5 - Não</option>
+                            <option value="6">6 - Não se aplica</option>
+                            <option value="9">9 - Ignorado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">13. Raça/Cor</label>
+                        <select class="form-select">
+                            <option value="1">1 - Branca</option>
+                            <option value="2">2 - Preta</option>
+                            <option value="3">3 - Amarela</option>
+                            <option value="4">4 - Parda</option>
+                            <option value="5">5 - Indígena</option>
+                            <option value="9">9 - Ignorado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">14. Escolaridade</label>
+                        <select class="form-select">
+                            <option value="0">0 - Analfabeto</option>
+                            <option value="1">1 - 1ª a 4ª série inc. EF</option>
+                            <option value="2">2 - 4ª série comp. EF</option>
+                            <option value="3">3 - 5ª a 8ª série inc. EF</option>
+                            <option value="4">4 - Ensino fund. completo</option>
+                            <option value="5">5 - Ensino médio incompleto</option>
+                            <option value="6">6 - Ensino médio completo</option>
+                            <option value="7">7 - Ed. superior incompleta</option>
+                            <option value="8">8 - Ed. superior completa</option>
+                            <option value="9">9 - Ignorado</option>
+                            <option value="10">10 - Não se aplica</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">15. Número do Cartão SUS</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-label">16. Nome da mãe</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+                <legend class="bg-light p-2 border">DADOS DE RESIDÊNCIA</legend>
+                <div class="row g-3">
+                    <div class="col-md-2">
+                        <label class="form-label">17. UF</label>
+                        <input type="text" class="form-control" maxlength="2">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">18. Município de Residência</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Código (IBGE)</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">19. Distrito</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">20. Bairro</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">21. Logradouro</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Código</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">22. Número</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">23. Complemento</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">26. Ponto de Ref.</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">27. CEP</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">28. Telefone</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">29. Zona</label>
+                        <select class="form-select">
+                            <option value="1">1 - Urbana</option>
+                            <option value="2">2 - Rural</option>
+                            <option value="3">3 - Periurbana</option>
+                            <option value="9">9 - Ignorado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">30. País (se fora do BR)</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-4 page-break-inside-avoid">
+                <legend class="bg-light p-2 border">DADOS CLÍNICOS E LABORATORIAIS</legend>
+                <div class="row g-3">
+                    <div class="col-md-2">
+                        <label class="form-label">31. Data Investigação</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">32. Ocupação</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    
+                    <div class="col-12">
+                        <label class="form-label fw-bold">33. Sinais Clínicos</label>
+                        <div class="row">
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_febre"> <label for="s_febre">Febre</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_mialgia"> <label for="s_mialgia">Mialgia</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_cefaleia"> <label for="s_cefaleia">Cefaleia</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_exantema"> <label for="s_exantema">Exantema</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_vomito"> <label for="s_vomito">Vômito</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_nauseas"> <label for="s_nauseas">Náuseas</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_costas"> <label for="s_costas">Dor nas costas</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_conjuntivite"> <label for="s_conjuntivite">Conjuntivite</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_artrite"> <label for="s_artrite">Artrite</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_artralgia"> <label for="s_artralgia">Artralgia intensa</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_petequias"> <label for="s_petequias">Petéquias</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_leucopenia"> <label for="s_leucopenia">Leucopenia</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_laco"> <label for="s_laco">Prova do laço (+)</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="s_retro"> <label for="s_retro">Dor retroorbital</label></div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                        <label class="form-label fw-bold">34. Doenças Pré-existentes</label>
+                        <div class="row">
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="d_diabetes"> <label for="d_diabetes">Diabetes</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="d_hemato"> <label for="d_hemato">Doenças hematológicas</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="d_hepato"> <label for="d_hepato">Hepatopatias</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="d_renal"> <label for="d_renal">Doença renal crônica</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="d_hiper"> <label for="d_hiper">Hipertensão arterial</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="d_acido"> <label for="d_acido">Doença ácido-péptica</label></div>
+                            <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="d_auto"> <label for="d_auto">Doenças auto-imunes</label></div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-3 border-top pt-2">
+                        <h6>Laboratório</h6>
+                        <div class="row g-2">
+                            <div class="col-md-12"><strong>Chikungunya:</strong></div>
+                            <div class="col-md-3">
+                                <label class="small">35. Data Coleta 1ª (S1)</label>
+                                <input type="date" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="small">36. Data Coleta 2ª (S2)</label>
+                                <input type="date" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="small">37. Data Coleta PRNT</label>
+                                <input type="date" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="small">38. Resultado IgM</label>
+                                <select class="form-select form-select-sm">
+                                    <option value="">Selecione...</option>
+                                    <option value="1">1- Reagente</option>
+                                    <option value="2">2- Não Reagente</option>
+                                    <option value="3">3- Inconclusivo</option>
+                                    <option value="4">4- Não Realizado</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-12 mt-2"><strong>Dengue (NS1 e Isolamento):</strong></div>
+                            <div class="col-md-3">
+                                <label class="small">39. Data Coleta NS1</label>
+                                <input type="date" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="small">40. Res. NS1</label>
+                                <select class="form-select form-select-sm">
+                                    <option value="">Selecione...</option>
+                                    <option value="1">1- Positivo</option>
+                                    <option value="2">2- Negativo</option>
+                                    <option value="3">3- Inconclusivo</option>
+                                    <option value="4">4- Não Realizado</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="small">43. Data Coleta Isolam.</label>
+                                <input type="date" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="small">44. Res. Isolamento</label>
+                                <select class="form-select form-select-sm">
+                                    <option value="">Selecione...</option>
+                                    <option value="1">1- Positivo</option>
+                                    <option value="2">2- Negativo</option>
+                                    <option value="3">3- Inconclusivo</option>
+                                    <option value="4">4- Não Realizado</option>
+                                </select>
+                            </div>
+
+                             <div class="col-md-12 mt-2"><strong>RT-PCR / Sorotipo:</strong></div>
+                             <div class="col-md-3">
+                                 <label class="small">45. Data Coleta RT-PCR</label>
+                                 <input type="date" class="form-control form-control-sm">
+                             </div>
+                             <div class="col-md-3">
+                                 <label class="small">46. Res. RT-PCR</label>
+                                 <select class="form-select form-select-sm">
+                                     <option value="">Selecione...</option>
+                                     <option value="1">1- Positivo</option>
+                                     <option value="2">2- Negativo</option>
+                                     <option value="3">3- Inconclusivo</option>
+                                     <option value="4">4- Não Realizado</option>
+                                 </select>
+                             </div>
+                             <div class="col-md-3">
+                                <label class="small">47. Sorotipo</label>
+                                <select class="form-select form-select-sm">
+                                    <option value="">Selecione...</option>
+                                    <option value="1">DENV 1</option>
+                                    <option value="2">DENV 2</option>
+                                    <option value="3">DENV 3</option>
+                                    <option value="4">DENV 4</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="small">48. Histopatologia</label>
+                                <select class="form-select form-select-sm">
+                                    <option value="">Selecione...</option>
+                                    <option value="1">Compatível</option>
+                                    <option value="2">Incompatível</option>
+                                    <option value="3">Inconclusivo</option>
+                                    <option value="4">Não Realizado</option>
+                                </select>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </fieldset>
+
+            <hr class="my-5" style="border-top: 3px dashed #bbb;">
+
+            <fieldset class="mb-4">
+                <legend class="bg-light p-2 border">DADOS DE HOSPITALIZAÇÃO E CONCLUSÃO</legend>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">50. Hospitalização?</label>
+                        <select class="form-select">
+                            <option value="2">2 - Não</option>
+                            <option value="1">1 - Sim</option>
+                            <option value="9">9 - Ignorado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">51. Data Internação</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">52. UF</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">53. Município do Hospital</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-label">54. Nome do Hospital</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">55. Telefone</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+             </fieldset>
+
+             <fieldset class="mb-4">
+                <legend class="bg-light p-2 border">LOCAL PROVÁVEL DE INFECÇÃO (últimos 15 dias)</legend>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">56. Caso autóctone da residência?</label>
+                        <select class="form-select">
+                            <option value="1">1 - Sim</option>
+                            <option value="2">2 - Não</option>
+                            <option value="3">3 - Indeterminado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">57. UF</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">58. País</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">59. Município</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">60. Distrito</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">61. Bairro</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+             </fieldset>
+
+             <fieldset class="mb-4">
+                <legend class="bg-light p-2 border">CONCLUSÃO</legend>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">62. Classificação Final</label>
+                        <select class="form-select">
+                            <option value="5">5 - Descartado</option>
+                            <option value="10">10 - Dengue</option>
+                            <option value="11">11 - Dengue c/ Sinais de Alarme</option>
+                            <option value="12">12 - Dengue Grave</option>
+                            <option value="13">13 - Chikungunya</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">63. Critério de Confirmação</label>
+                        <select class="form-select">
+                            <option value="1">1 - Laboratório</option>
+                            <option value="2">2 - Clínico-Epidemiológico</option>
+                            <option value="3">3 - Em investigação</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">65. Evolução do Caso</label>
+                        <select class="form-select">
+                            <option value="1">1 - Cura</option>
+                            <option value="2">2 - Óbito pelo agravo</option>
+                            <option value="3">3 - Óbito outras causas</option>
+                            <option value="4">4 - Óbito em investigação</option>
+                            <option value="9">9 - Ignorado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">66. Data do Óbito</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">67. Data Encerramento</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+             </fieldset>
+
+             <fieldset class="mb-4">
+                <legend class="bg-light p-2 border text-danger">DENGUE COM SINAIS DE ALARME E GRAVE</legend>
+                
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <h6 class="text-danger">68. Sinais de Alarme</h6>
+                    </div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_dorabd"><label for="sa_dorabd">Dor abdominal intensa</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_vomito"><label for="sa_vomito">Vômitos persistentes</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_liq"><label for="sa_liq">Acúmulo de líquidos</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_hipot"><label for="sa_hipot">Hipotensão postural/lipotímia</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_hepato"><label for="sa_hepato">Hepatomegalia >= 2cm</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_sangra"><label for="sa_sangra">Sangramento de mucosa</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_letargia"><label for="sa_letargia">Letargia ou irritabilidade</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_aumento"><label for="sa_aumento">Aumento progr. hematócrito</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sa_queda"><label for="sa_queda">Queda abrupta plaquetas</label></div>
+                </div>
+
+                <div class="row mb-3 border-top pt-2">
+                    <div class="col-12">
+                        <h6 class="text-danger fw-bold">70. Dengue Grave</h6>
+                    </div>
+                    <div class="col-12"><small class="text-muted">Sangramento Grave:</small></div>
+                    <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="sg_hemat"><label for="sg_hemat">Hematêmese</label></div>
+                    <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="sg_melena"><label for="sg_melena">Melena</label></div>
+                    <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="sg_metro"><label for="sg_metro">Metrorragia volumosa</label></div>
+                    <div class="col-md-3 form-check"><input type="checkbox" class="form-check-input" id="sg_snc"><label for="sg_snc">Sangramento do SNC</label></div>
+                    
+                    <div class="col-12 mt-2"><small class="text-muted">Comprometimento de Órgãos:</small></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sg_ast"><label for="sg_ast">AST/ALT > 1.000</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sg_mio"><label for="sg_mio">Miocardite</label></div>
+                    <div class="col-md-4 form-check"><input type="checkbox" class="form-check-input" id="sg_consc"><label for="sg_consc">Alteração da consciência</label></div>
+                </div>
+             </fieldset>
+
+             <div class="row g-3 mt-4 border-top pt-3">
+                <div class="col-md-4">
+                    <label class="form-label">Investigador</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Função</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Assinatura</label>
+                    <input type="text" class="form-control" disabled placeholder="_________________________">
+                </div>
+             </div>
+
+        </form>
+
+        <div class="d-grid gap-2 col-6 mx-auto my-5">
+            <button class="btn btn-primary btn-lg no-print" onclick="gerarPDF()">Salvar e Exportar PDF</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
