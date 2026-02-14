@@ -1,0 +1,86 @@
+/* Reset básico e fontes */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Ajustes para o container da ficha */
+#conteudo-ficha {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    max-width: 1000px; /* Largura similar a A4 */
+}
+
+/* Estilo dos Fieldsets (Agrupamentos) */
+fieldset {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+legend {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #0d6efd; /* Azul Bootstrap */
+    width: auto;
+    margin-bottom: 0;
+}
+
+/* Labels menores para caber tudo */
+.form-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* Inputs mais compactos */
+.form-control, .form-select {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Checkboxes alinhados */
+.form-check {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.form-check-input {
+    margin-top: 0.2rem;
+}
+
+/* Cabeçalho */
+header h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+header h5 {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Classes utilitárias para PDF/Impressão */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    body {
+        background-color: #fff;
+    }
+    #conteudo-ficha {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+/* Garante que grupos lógicos não quebrem no meio da página no PDF */
+.page-break-inside-avoid {
+    page-break-inside: avoid;
+}
